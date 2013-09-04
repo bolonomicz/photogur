@@ -5,7 +5,7 @@
 
 <% @pictures.each do |picture| %>
 	<div>
-	<h1><%= picture[:title] %><br>by <%= picture[:artist] %></h1>
+	<h1><%= picture[:title] %><br> <em>by</em> <%= picture[:artist] %></h1>
 	
 	<%= link_to "pictures/#{picture.id}" do %>
 		<img src="<%= picture[:url] %>">
