@@ -1,16 +1,14 @@
 <h1>Pictures</h1>
-<div class="btn">
-<%= link_to "New Picture", "/pictures/new"%>
-</div>
+
 
 <% @pictures.each do |picture| %>
 	<div>
-	<h1><%= picture[:title] %><br> <em>by</em> <%= picture[:artist] %></h1>
+
 	
 	<%= link_to "pictures/#{picture.id}" do %>
 		<img src="<%= picture[:url] %>">
 	<% end %>
-  
+  	<h6><%= picture[:title] %><br> <em>by</em> <%= picture[:artist] %></h6>
 
 
   </div>
