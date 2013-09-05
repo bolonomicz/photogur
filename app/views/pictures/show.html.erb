@@ -4,10 +4,17 @@
 <p><%= @picture[:title] %> <em>by</em> <%= @picture[:artist] %></p>
 <img src="<%= @picture[:url] %>">
 
+<div class="row">
+	<div class="span6">
+		<h2>Comments</h2>
+		<%= render @picture.comments %>
+	</div>
 
-<h2>Comments</h2>
-<%= render @picture.comments %>
- 
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
+	<div class="span6">
+		<h2>Add a comment:</h2>
+		<%= render "comments/form" %>
+	</div> 
+</div>
+
+
 
