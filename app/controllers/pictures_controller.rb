@@ -14,14 +14,17 @@ class PicturesController < ApplicationController
 		@picture = Picture.new
 	end
 
-	def create
-		@picture = Picture.new(params[:picture])
-		if @picture.save
-			redirect_to pictures_url
-		else
-			render :new
-		end
-	end
+ def create
+
+  @picture = Picture.new(params[:picture])
+  if @picture.save
+    
+    redirect_to pictures_url
+  else
+
+    render :new
+  end
+end
 
 	def edit
 		@picture = Picture.find(params[:id])
@@ -33,7 +36,7 @@ class PicturesController < ApplicationController
 		if @picture.update_attributes(params[:picture])
 			redirect_to "/pictures/#{@picture.id}"
 		else
-			reder :edit
+			render :edit
 		end
 	end
 

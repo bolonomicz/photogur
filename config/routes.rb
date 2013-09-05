@@ -3,6 +3,8 @@ Photogur::Application.routes.draw do
   resources :pictures do
     resources :comments
   end
+
+   #post 'pictures' => "pictures#create"
    # post 'pictures' => "pictures#create"
 
    # get 'pictures' => 'pictures#index'
