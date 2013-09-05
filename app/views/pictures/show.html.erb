@@ -1,4 +1,4 @@
-<%= link_to "Back to Pictures", pictures_url, :class => "btn" %> | <%= link_to "Edit", edit_picture_path(@picture), :class => "btn" %> | <%= link_to "Delete", @picture, :class => "btn", :confirm => "Are you sure you want to delete this picture?", :method => :delete, :class => "btn" %>
+<%= link_to "Back to Pictures", pictures_url, :class => "btn" %>  <%= link_to "Edit", edit_picture_path(@picture), :class => "btn" %>  <%= link_to "Delete", @picture, :class => "btn", :confirm => "Are you sure you want to delete this picture?", :method => :delete, :class => "btn" %>
 
 
 <p><%= @picture[:title] %> <em>by</em> <%= @picture[:artist] %></p>
